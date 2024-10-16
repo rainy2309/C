@@ -86,7 +86,7 @@
 //   }
 //   return 0;
 //}
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(){
     int month;
@@ -98,7 +98,7 @@ int main(){
           printf("January");
           break;
           case 2:
-          printf("Febnuary");
+          printf("February");
           break;
           case 3:
           printf("March");
@@ -109,10 +109,86 @@ int main(){
           case 5:
           printf("May");
           break;
+          case 6:
+          printf("June");
+          break;
+          case 7:
+          printf("July");
+          break;
+          case 8:
+          printf("August");
+          break; 
+          case 9:
+          printf("September");
+          break;
+          case 10:
+          printf("October");
+          break;
+          case 11:
+          printf("November");
+          break;
+          case 12:
+          printf("December");
+          break;
         default:
             printf("Invalid Number");
       
 
     }
     return 0;
+}*/
+// #include <stdio.h>
+
+// int main() {
+//     // nhận số nguyên từ bàn phím
+//     int n;
+//     int i;
+//     int total = 0;
+//     scanf("%d", &n);
+//     // xây dựng bảng nhân từ 6 đến 9
+//     for (int i=1;i<=10;i++)
+    
+//     {
+//       total=n*i;
+//        printf("%d * %d = %d\n",n,i,total);
+//     }
+   
+  
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+
+// int main() {
+
+//   for (int i = 1; i <= 5; ++i) {
+//     if (i == 3 || i == 4) {
+//       continue;
+//     }
+//     printf("%d\n", i);
+//   }
+
+// return 0;
+// }
+
+
+#include <stdio.h>
+
+// định nghĩa hàm
+void findSquare(int number) {
+  int result = number * number;
+  printf("Square of %d is %d\n", number, result);
 }
+
+int main() {
+  // gọi hàm
+  findSquare(19);
+
+  return 0;
+}
+
+
+
+
+
