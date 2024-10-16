@@ -57,3 +57,17 @@
 //    printf("%-20.5s\n", str); //left align and print string up to 5 character 
 // }
 
+#include <stdio.h>
+
+int main() {
+
+  
+
+  int number;
+
+  if (age > 20) {
+    for (int i = 0; i < num_members; i++) {
+        printf("%s\n", family[i]);
+    }
+  }
+}
