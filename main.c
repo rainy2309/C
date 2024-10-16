@@ -73,3 +73,46 @@
 // }
 
 
+// #include <stdio.h>
+
+// int main() {
+//   int count = 0;
+//   for (;;) {
+//     if (count == 10) {
+//       break;
+//     }
+//     printf("%d\n", count);
+//     count++;
+//   }
+//   return 0;
+//}
+#include <stdio.h>
+
+int main(){
+    int month;
+    scanf("%d", &month);
+    switch(month){
+        // mỗi case in ra tháng tương ứng
+        
+          case 1:
+          printf("January");
+          break;
+          case 2:
+          printf("Febnuary");
+          break;
+          case 3:
+          printf("March");
+          break;
+          case 4:
+          printf("April");
+          break;
+          case 5:
+          printf("May");
+          break;
+        default:
+            printf("Invalid Number");
+      
+
+    }
+    return 0;
+}
