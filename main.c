@@ -56,7 +56,7 @@
 //    printf("%20.5s\n", str); //shift to the right 20 characters including the string, and print string up to 5 character 
 //    printf("%-20.5s\n", str); //left align and print string up to 5 character 
 // }
-
+//tinh tong cac so trong 1 so
 #include <stdio.h>
 #include <math.h>
 int main (){
@@ -69,5 +69,5 @@ int main (){
         n=n/10;
     }
     printf("%d",tong);
-    
+ return 0;   
 }
