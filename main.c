@@ -296,7 +296,7 @@ int main(){
 #include <stdio.h>
 int main (){
   int n,m;
-  int arr[n][m];
+  int arr[100][100];
   scanf("%d %d",&n,&m);
   for (int i = 0; i < n; i++)
   {
@@ -306,10 +306,11 @@ int main (){
   }int sum=0;
   for (int i=0;i<n;i++){
     for (int k=0;k<m;k++){
-      printf("%d",sum+= arr[i][k]);
+      sum+= arr[i][k];
     }
 
   }
+  printf("%d",sum);
   
 
 }
