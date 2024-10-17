@@ -229,23 +229,89 @@ int main(){
 // }
 
 
-#include<stdio.h>
+// #include <stdio.h>
+ 
+// //Hàm tính điểm trung bình
+// double getAverageScore(double scores[], int n) {
+//   double sum=0;
+//   for (int i=0;i<n;i++){
+//     sum += scores[i];
+//   }
+//   double average = sum/n;
+//   return average;
+// }
+// char computeGrade(double averageScore) {
+//   char grade;
 
-int main() {
-  int n;
-  int sum=0;
-  int arr[1000];
-  scanf("%d",&n);
-  for(int i=0;i<n;i++){
-    scanf("%d",&arr[i]);
-  } 
-  for(int i=0;i<n;i++){
-    if(arr[i]>=0&&arr[i]<=10){
-      printf("%d ",arr[i]);
+  
+//     if (averageScore>=80){
+//        grade='A';
+//     } if (averageScore>=60&&averageScore<80){
+//        grade='B';
+//     } if (averageScore<60&&averageScore>=50){
+//        grade='C';
+//     }else{
+//       grade ='F';
+//     }
+  
+//   return grade;
+// }
+ 
+// int main() {
+//   // Nhập đầu vào là một mảng
+//   int n;
+//   scanf("%d", &n);
+//   double scores[n];
+//   for(int i=0 ; i<n; i++){
+//   scanf("%lf",&scores[i]);
+//   }
+//   double averageScore = getAverageScore(scores,n);
+//   printf("%.2lf", averageScore); 
+//   return 0;
+// }
+                // sap xep 1 chuoi
+// #include <stdio.h>
+// int main (){
+//   int n;
+//   scanf("%d",&n);
+//   int arr[n];
+//   for (int i=0;i<n;i++){
+//     scanf("%d",&arr[i]); 
+//   }
+//   for (int i=0;i<(n-1);i++){
+//     for(int k=i+1;k<n;k++){
+//       if(arr[i]>arr[k]){
+//         int newnum=arr[i];
+//         arr[i]=arr[k];
+//         arr[k]=newnum;
+//       }
+//     }
+//   }
+//   for (int i=0;i<n;i++){
+//     printf("%d ",arr[i]);
+//   }
+//   return 0;
+// }
+
+#include <stdio.h>
+int main (){
+  int n,m;
+  int arr[n][m];
+  scanf("%d %d",&n,&m);
+  for (int i = 0; i < n; i++)
+  {
+    for (int k=0;k<m;k++){
+      scanf("%d",&arr[i][k]);
     }
-  }
-  return 0;
-}
+  }int sum=0;
+  for (int i=0;i<n;i++){
+    for (int k=0;k<m;k++){
+      printf("%d",sum+= arr[i][k]);
+    }
 
+  }
+  
+
+}
 
 
