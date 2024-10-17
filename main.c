@@ -172,23 +172,60 @@ int main(){
 // return 0;
 // }
 
+// #include <stdio.h>
 
+// // định nghĩa hàm với hai tham số
+// void addNumbers(double n1, double n2) {
+//     // tính tổng hai tham số và in ra màn hình
+//     printf("%lf\n",n1+n2);
+// }
+
+// int main() {
+//     double number1;
+//     double number2;
+//     scanf("%lf %lf", &number1, &number2);
+//     // gọi hàm với hai tham số
+//     addNumbers(number1,number2);
+    
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+
+// int addNumbers(int n1, int n2) {
+//   int sum = n1 + n2;
+//   return sum;
+// }
+
+ 
+// #include <stdio.h>
+
+// int main() {
+//     // tạo mảng số thực
+//     double numbers[4]={3.5, 8.9, 1.6, -4.8};
+//     // truy cập phần tử mảng bằng vòng lặp
+//     for (int index=0;index<4;index++) {
+//         printf("%.2lf\n", numbers[index]);
+//     }
+//     return 0;
+// }
 #include <stdio.h>
 
-// định nghĩa hàm
-void findSquare(int number) {
-  int result = number * number;
-  printf("Square of %d is %d\n", number, result);
-}
-
 int main() {
-  // gọi hàm
-  findSquare(19);
-
-  return 0;
+    // khởi tạo mảng
+    int numbers[4] = {43, 78, 23, 45};
+    // khai báo một mảng cùng kích thước
+    int newNumbers[4];
+    // lặp qua các phần tử của mảng và nhân chúng với 10
+    for(int i=0;i<4;i++){
+      int newNumbers=10*numbers[i];
+    
+      printf("%d\n",newNumbers);
+    }
+    // in mảng mới ra màn hình 
+    
+    return 0;
 }
-
-
-
 
 
