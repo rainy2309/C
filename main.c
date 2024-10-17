@@ -210,22 +210,42 @@ int main(){
 //     }
 //     return 0;
 // }
-#include <stdio.h>
+// #include <stdio.h>
+
+// int main() {
+//     // khởi tạo mảng
+//     int numbers[4] = {43, 78, 23, 45};
+//     // khai báo một mảng cùng kích thước
+//     int newNumbers[4];
+//     // lặp qua các phần tử của mảng và nhân chúng với 10
+//     for(int i=0;i<4;i++){
+//       int newNumbers=10*numbers[i];
+    
+//       printf("%d\n",newNumbers);
+//     }
+//     // in mảng mới ra màn hình 
+    
+//     return 0;
+// }
+
+
+#include<stdio.h>
 
 int main() {
-    // khởi tạo mảng
-    int numbers[4] = {43, 78, 23, 45};
-    // khai báo một mảng cùng kích thước
-    int newNumbers[4];
-    // lặp qua các phần tử của mảng và nhân chúng với 10
-    for(int i=0;i<4;i++){
-      int newNumbers=10*numbers[i];
-    
-      printf("%d\n",newNumbers);
+  int n;
+  int sum=0;
+  int arr[1000];
+  scanf("%d",&n);
+  for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+  } 
+  for(int i=0;i<n;i++){
+    if(arr[i]>=0&&arr[i]<=10){
+      printf("%d ",arr[i]);
     }
-    // in mảng mới ra màn hình 
-    
-    return 0;
+  }
+  return 0;
 }
+
 
 
