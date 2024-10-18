@@ -306,7 +306,10 @@ int main (){
   }int sum=0;
   for (int i=0;i<n;i++){
     for (int k=0;k<m;k++){
-      sum+= arr[i][k];
+      if (arr[i][k]%5==0){
+              sum+= arr[i][k];
+
+      }
     }
 
   }
