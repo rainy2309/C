@@ -293,30 +293,80 @@ int main(){
 //   return 0;
 // }
 
-#include <stdio.h>
-int main (){
-  int n,m;
-  int arr[100][100];
-  scanf("%d %d",&n,&m);
-  for (int i = 0; i < n; i++)
-  {
-    for (int k=0;k<m;k++){
-      scanf("%d",&arr[i][k]);
-    }
-  }int sum=0;
-  for (int i=0;i<n;i++){
-    for (int k=0;k<m;k++){
-      if (arr[i][k]%5==0){
-              sum+= arr[i][k];
+// #include <stdio.h>
+// int main (){
+//   int n,m;
+//   int arr[100][100];
+//   scanf("%d %d",&n,&m);
+//   for (int i = 0; i < n; i++)
+//   {
+//     for (int k=0;k<m;k++){
+//       scanf("%d",&arr[i][k]);
+//     }
+//   }int sum=0;
+//   for (int i=0;i<n;i++){
+//     for (int k=0;k<m;k++){
+//       if (arr[i][k]%5==0){
+//               sum+= arr[i][k];
 
-      }
-    }
+//       }
+//     }
 
-  }
-  printf("%d",sum);
+//   }
+//   printf("%d",sum);
+  
+
+// }
+
+// #include  <stdio.h>
+// #include <ctype.h>
+// int main (){
+//   int n;
+//   scanf("%d",&n);
+//   int arr[n];
+//   for (int i=0;i<n;i++){
+//     scanf("%d",&arr[i]);
+//   }
+//   for (int i=0;i<n;i++){
+//     if(arr[i]>=0&&arr[i]<10){
+//       printf("%d ",arr[i]);
+//     }
+//   }
   
 // }
 
+
+// #include <stdio.h>
+
+// int main() {
+
+//     // assign "Snowpiercer" to the move string
+// char movie[]="Snowpierce";
+// printf("%c",movie[4]);
+        
+//     // print the fourth character
+
+    
+//     return 0;
+
+// }
+
+
+#define MOD 1000000007
+long long fibSum(int n) {
+    
+    if (n == 1) return 1;  // Nếu n = 1, trả về 1 vì chỉ có 1 số Fibonacci đầu tiên
+
+    long long fib1 = 1, fib2 = 1;  // Khởi tạo Fib(1) và Fib(2)
+    long long sum = 2;  // Tổng của hai số Fibonacci đầu tiên là 1 + 1 = 2
+
+    // Tính các số Fibonacci từ Fib(3) đến Fib(n) và cộng vào tổng
+    for (int i = 3; i <= n; i++) {
+        long long fib = (fib1 + fib2) % MOD;  // Tính Fib(i) và lấy theo modulo
+        sum = (sum + fib) % MOD;  // Cộng vào tổng và lấy theo modulo
+        fib1 = fib2;  // Cập nhật Fib(i-1)
+        fib2 = fib;   // Cập nhật Fib(i)
+    }
+
+    return sum;
 }
-
-
