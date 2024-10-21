@@ -377,19 +377,20 @@ int main(){
 
 #include <stdio.h>
 #include <math.h>
+int bai1(int x,int y){
+  return x==y?(x+y)*3:(x+y);
+}
+int bai2(int n){
+  int x=51;
+  if(n>x){
+    return (n-x)*3;
+  }
+  return x-n;
+}
+int bai3(int x,int y){
+  return x == 30 || y == 30 || (x + y == 30);
+}
+
 int main(){
- int n;
- scanf("%d",&n);
-  if(n<=1){
-    printf("No");
-  }
-  for(int i=3;i<sqrt(n);i++){
-    if(n%i==0){
-      printf("No");
-    }else{
-      printf("Yes");
-    }
-  }if(n==2){
-    printf("Yes");
-  }
+ printf("%d",bai3(25,5));
 }
