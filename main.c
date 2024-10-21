@@ -352,21 +352,44 @@ int main(){
 // }
 
 
-#define MOD 1000000007
-long long fibSum(int n) {
+// #define MOD 1000000007
+// long long fibSum(int n) {
     
-    if (n == 1) return 1;  // Nếu n = 1, trả về 1 vì chỉ có 1 số Fibonacci đầu tiên
+//     if (n == 1) return 1;  // Nếu n = 1, trả về 1 vì chỉ có 1 số Fibonacci đầu tiên
 
-    long long fib1 = 1, fib2 = 1;  // Khởi tạo Fib(1) và Fib(2)
-    long long sum = 2;  // Tổng của hai số Fibonacci đầu tiên là 1 + 1 = 2
+//     long long fib1 = 1, fib2 = 1;  // Khởi tạo Fib(1) và Fib(2)
+//     long long sum = 2;  // Tổng của hai số Fibonacci đầu tiên là 1 + 1 = 2
 
-    // Tính các số Fibonacci từ Fib(3) đến Fib(n) và cộng vào tổng
-    for (int i = 3; i <= n; i++) {
-        long long fib = (fib1 + fib2) % MOD;  // Tính Fib(i) và lấy theo modulo
-        sum = (sum + fib) % MOD;  // Cộng vào tổng và lấy theo modulo
-        fib1 = fib2;  // Cập nhật Fib(i-1)
-        fib2 = fib;   // Cập nhật Fib(i)
+//     // Tính các số Fibonacci từ Fib(3) đến Fib(n) và cộng vào tổng
+//     for (int i = 3; i <= n; i++) {
+//         long long fib = (fib1 + fib2) % MOD;  // Tính Fib(i) và lấy theo modulo
+//         sum = (sum + fib) % MOD;  // Cộng vào tổng và lấy theo modulo
+//         fib1 = fib2;  // Cập nhật Fib(i-1)
+//         fib2 = fib;   // Cập nhật Fib(i)
+//     }
+
+//     return sum;
+// }
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main(){
+ int n;
+ scanf("%d",&n);
+  if(n<=1){
+    printf("No");
+  }
+  for(int i=3;i<sqrt(n);i++){
+    if(n%i==0){
+      printf("No");
+    }else{
+      printf("Yes");
     }
-
-    return sum;
+  }if(n==2){
+    printf("Yes");
+  }
 }
