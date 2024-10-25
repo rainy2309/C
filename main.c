@@ -397,20 +397,3 @@ int main(){
 
 
 
-#include <stdio.h>
-int main(){
-  int m,n;
-  scanf("%d%d",&m,&n);
-  int sum=0;
-  int temp=0;
-  for(m;m<=n;m++){
-   if(m%3==0||m%5==0){
-    temp++;
-   }
-   if(m%2==0){
-    sum+=m;
-   } 
-  }  
-  printf("%d\n",temp);
-  printf("%d",sum);
-}
