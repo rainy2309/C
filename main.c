@@ -375,22 +375,42 @@ int main(){
 
 
 
-#include <stdio.h>
-#include <math.h>
-int bai1(int x,int y){
-  return x==y?(x+y)*3:(x+y);
-}
-int bai2(int n){
-  int x=51;
-  if(n>x){
-    return (n-x)*3;
-  }
-  return x-n;
-}
-int bai3(int x,int y){
-  return x == 30 || y == 30 || (x + y == 30);
-}
+// #include <stdio.h>
+// #include <math.h>
+// int bai1(int x,int y){
+//   return x==y?(x+y)*3:(x+y);
+// }
+// int bai2(int n){
+//   int x=51;
+//   if(n>x){
+//     return (n-x)*3;
+//   }
+//   return x-n;
+// }
+// int bai3(int x,int y){
+//   return x == 30 || y == 30 || (x + y == 30);
+// }
 
+// int main(){
+//  printf("%d",bai3(25,5));
+// }
+
+
+
+#include <stdio.h>
 int main(){
- printf("%d",bai3(25,5));
+  int m,n;
+  scanf("%d%d",&m,&n);
+  int sum=0;
+  int temp=0;
+  for(m;m<=n;m++){
+   if(m%3==0||m%5==0){
+    temp++;
+   }
+   if(m%2==0){
+    sum+=m;
+   } 
+  }  
+  printf("%d\n",temp);
+  printf("%d",sum);
 }
