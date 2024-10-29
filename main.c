@@ -390,6 +390,28 @@ int bai2(int n){
 int bai3(int x,int y){
   return x == 30 || y == 30 || (x + y == 30);
 }
+int bai4(int x){//within 10 of 100 or 200. có nghĩa là [90-110] và [190 - 210] =>> lấy x -100 và -200 nếu abs(x) <=10 = 1, ngược lại = 0
+  if(abs(x-100)<=10||abs(x-200)<=10) return 1;
+  return 0;
+}
+int bai5(int x){
+  if (x%3==0||x%7==0) return 1;
+  return 0;
+}
+int bai6(int x,int y){
+  return (x<0&&y>100||x>100&&y<0);
+}
+int bai7(int x,int y){
+  return (x>=100&&x<=200||y>=100&&y<=200);
+}
+int bai8(int x,int y, int z){
+  return (x>=20 && x<=50||y>=20 && y<=50||z>=20 && z<=50);
+}
+int bai9(int x,int y){
+  if(y<x) return x;
+  if(x<y) return y;
+  return 0;
+}
 
 
 
