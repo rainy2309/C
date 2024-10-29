@@ -377,6 +377,75 @@ int main(){
 
 #include <stdio.h>
 #include <math.h>
+
+
+
+
+void tamgiacdeu(int n) {
+    for (int i=1;i<=n;i++){
+      for(int j=1;j<=n-i;j++)
+      printf(" ");
+      for(int j=1;j<=i;j++)
+      printf("* ");
+      printf("\n");
+    }
+    
+    
+}
+void tamgiacdeunguoc(int n){
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<i;j++){
+      printf(" ");
+    }
+    for(int j=i;j<=n;j++){
+      printf("* ");
+    }
+    printf("\n");
+  }
+}
+void tamgiacvuongcan(int n){
+  for(int i=1;i<n;i++){
+    for(int j=1;j<i;j++){
+      printf("* ");
+    }
+    printf("\n");
+  }
+}
+void tamgiacvuongcan1(int n){
+  for(int i=0;i<n;i++){
+    for(int j=0;j<i;j++)
+    printf("  "); 
+    for(int j=i;j<n;j++)
+    printf(" *");
+    printf("\n");
+  }
+}
+void tamgiactest(int n){
+  int i,j;
+   for(i = 0; i < n; i++) {
+      for(j=0; j<i; j++)
+         printf("  "); 
+
+      for(j=i; j < n; j++)
+         printf(" *");
+
+      printf("\n");
+      
+   }
+}
+
+
+int main() {
+    int n;
+    printf("h = ");
+    scanf("%d", &n);
+    
+    tamgiactest(n);
+    tamgiacvuongcan1(n);
+   
+    return 0;
+}
+
 int bai1(int x,int y){
   return x==y?(x+y)*3:(x+y);
 }
@@ -411,49 +480,4 @@ int bai9(int x,int y){
   if(y<x) return x;
   if(x<y) return y;
   return 0;
-}
-
-
-
-
-void tamgiacdeu(int n) {
-    for (int i=1;i<=n;i++){
-      for(int j=1;j<=n-i;j++)
-      printf(" ");
-      for(int j=1;j<=i;j++)
-      printf("* ");
-      printf("\n");
-    }
-    
-    
-}
-void tamgiacdeunguoc(int n){
-  for(int i=1;i<=n;i++){
-    for(int j=1;j<i;j++){
-      printf(" ");
-    }
-    for(int j=i;j<=n;j++){
-      printf("* ");
-    }
-    printf("\n");
-  }
-}
-void tamgiacvuongcan(int n){
-  for(int i=1;i<=n;i++){
-    for(int j=1;j<=i;j++){
-      printf("* ");
-    }
-    printf("\n");
-  }
-}
-
-
-int main() {
-    int n;
-    printf("h = ");
-    scanf("%d", &n);
-    
-    tamgiacvuongcan(n);
-   
-    return 0;
 }
