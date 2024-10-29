@@ -373,7 +373,7 @@ int main(){
 
 
 
-
+//tong hop bai tap ve hinh
 
 #include <stdio.h>
 #include <math.h>
@@ -412,40 +412,29 @@ void tamgiacvuongcan(int n){
   }
 }
 void tamgiacvuongcan1(int n){
-  for(int i=0;i<n;i++){
-    for(int j=0;j<i;j++)
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++)
     printf("  "); 
     for(int j=i;j<n;j++)
     printf(" *");
     printf("\n");
   }
 }
-void tamgiactest(int n){
-  int i,j;
-   for(i = 0; i < n; i++) {
-      for(j=0; j<i; j++)
-         printf("  "); 
-
-      for(j=i; j < n; j++)
-         printf(" *");
-
-      printf("\n");
-      
-   }
+void tamgiacvuongcan2(int n){
+  for(int i=n;i>=1;i--){
+    for(int j=1;j<=i;j++) printf("* ");
+    printf("\n");
+  }
 }
 
-
-int main() {
-    int n;
-    printf("h = ");
-    scanf("%d", &n);
-    
-    tamgiactest(n);
-    tamgiacvuongcan1(n);
-   
-    return 0;
+void  tamgiacfloid(int n){
+  int k=1;
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){printf("%d ",k);
+    k++;}    
+    printf("\n");
+  }
 }
-
 int bai1(int x,int y){
   return x==y?(x+y)*3:(x+y);
 }
@@ -476,8 +465,37 @@ int bai7(int x,int y){
 int bai8(int x,int y, int z){
   return (x>=20 && x<=50||y>=20 && y<=50||z>=20 && z<=50);
 }
-int bai9(int x,int y){
+int bai10(int x,int y){
   if(y<x) return x;
   if(x<y) return y;
   return 0;
+}
+int bai11(int x, int y){
+  if(x>=20&&x<=30&&y>=20&&y<=30){
+    if(x>=y) {return x;}
+    else{return y;}
+  }else if (x>=20&&x<=30)
+  {
+    return x;
+  }else if (y>=20&&y<=30)
+  {
+    return y;
+  }else{
+    return 0;
+  }
+  
+  
+}
+
+
+
+int main() {
+    int n;
+    printf("h = ");
+    scanf("%d", &n);
+    
+  
+    tamgiacfloid(n);
+   
+    return 0;
 }
