@@ -525,55 +525,19 @@ long long fibonacci(int k) {
     }
     return c;
 }
-int checksonguyento(int num) {
-    if (num < 2) return 0;
-    for (int i = 2; i <= sqrt(num); i++) {
-        if (num % i == 0) return 0;
-    }
-    return 1;
-}
-// Hàm tìm số nguyên tố thứ n
-int findNthPrime(int n) {
-    int count = 0;
-    int num = 2;  
-
-    while (count < n) {
-        if (checksonguyento(num)) {
-            count++;
-        }
-        if (count < n) {
-            num++;
-        }
-    }
-    return num;
-}
-long long fibonacci(int k) {
-    if (k == 0) return 1;
-    if (k == 1) return 1;
-    if (k == 2) return 2;
-
-    long long a = 1, b = 1, c = 2;
-    for (int i = 3; i <= k; i++) {
-        long long next = b + c;
-        a = b;
-        b = c;
-        c = next;
-    }
-    return c;
-}
 
 int main() {
-    int n;
-    scanf("%d", &n);
+    int n=4;
     
+
     // Bước 1: Tìm số nguyên tố thứ n
     int k = findNthPrime(n);
 
     // Bước 2: Tìm số Fibonacci thứ k
     long long fib_k = fibonacci(k);
-  
-    tamgiacfloid(n);
-   
+
+    printf("%lld",fib_k);
+
     return 0;
 }
 
