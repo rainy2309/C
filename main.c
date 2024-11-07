@@ -427,7 +427,7 @@ void tamgiacvuongcan2(int n){
   }
 }
 
-void  tamgiacfloid(int n){
+void tamgiacfloid(int n){
   int k=1;
   for(int i=1;i<=n;i++){
     for(int j=1;j<=i;j++){printf("%d ",k);
@@ -489,15 +489,55 @@ int bai11(int x, int y){
 
 
 
+int checksonguyento(int num) {
+    if (num < 2) return 0;
+    for (int i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) return 0;
+    }
+    return 1;
+}
+// Hàm tìm số nguyên tố thứ n
+int findNthPrime(int n) {
+    int count = 0;
+    int num = 2;  
+
+    while (count < n) {
+        if (checksonguyento(num)) {
+            count++;
+        }
+        if (count < n) {
+            num++;
+        }
+    }
+    return num;
+}
+long long fibonacci(int k) {
+    if (k == 0) return 1;
+    if (k == 1) return 1;
+    if (k == 2) return 2;
+
+    long long a = 1, b = 1, c = 2;
+    for (int i = 3; i <= k; i++) {
+        long long next = b + c;
+        a = b;
+        b = c;
+        c = next;
+    }
+    return c;
+}
 
 int main() {
-    int n,m;
-    int count=0;
-    scanf("%d%d",&m,&n);
-    for(int i=3;i<=sqrt(n);i++){
-        if(n%i==0){
+    int n;
+    printf("h = ");
+    scanf("%d", &n);
     
-    }
+  
+    tamgiacfloid(n);
+   
     return 0;
   }
 }
+
+
+
+
