@@ -491,12 +491,13 @@ int bai11(int x, int y){
 
 
 int main() {
-    int n;
-    printf("h = ");
-    scanf("%d", &n);
+    int n,m;
+    int count=0;
+    scanf("%d%d",&m,&n);
+    for(int i=3;i<=sqrt(n);i++){
+        if(n%i==0){
     
-  
-    tamgiacfloid(n);
-   
+    }
     return 0;
+  }
 }
